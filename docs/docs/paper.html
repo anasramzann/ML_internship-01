@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+
+  <!-- SEO Meta Tags -->
+  <title>FlyRank Search Intelligence & ML Portfolio</title>
+  <meta name="description" content="Machine learning pipelines and autonomous AI agents that turn search engagement data into evidence-backed editorial refresh briefs.">
+  <meta name="keywords" content="Machine Learning, Search Intelligence, AI Agents, SEO Engineering, FlyRank">
+  <meta name="author" content="FlyRank ML Intern">
+
+  <!-- Open Graph / Social Media Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FlyRank Search Intelligence & ML Portfolio">
+  <meta property="og:description" content="Autonomous AI Agents and ML pipelines for search engagement audits.">
+  <meta property="og:url" content="https://aifluency.flyrank.ai">
+  <meta property="og:image" content="https://internship-badge.netlify.app/og-preview.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FlyRank Search Intelligence & ML Portfolio">
+  <meta name="twitter:description" content="AI Agent Capstone & Search Metrics Audit Portfolio.">
+
+  <!-- Google Analytics / Web Analytics (Privacy Friendly) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MEASUREMENT_ID');
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #0F172A;
+      color: #F8FAFC;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px 12px;
+    }
+    .container {
+      max-width: 680px;
+      width: 100%;
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: clamp(20px, 5vw, 36px) clamp(16px, 4vw, 28px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    }
+    .monogram {
+      background-color: #2563EB;
+      color: #FFFFFF;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      display: inline-block;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+      line-height: 1.25;
+      color: #FFFFFF;
+    }
+    .bio {
+      color: #94A3B8;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      background: #334155;
+      color: #F8FAFC;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.2s ease, border-color 0.2s ease;
+      border: 1px solid transparent;
+    }
+    .btn-link:hover, .btn-link:focus {
+      background: #2563EB;
+      border-color: #38BDF8;
+      outline: none;
+    }
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #2563EB;
+      margin-bottom: 14px;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 6px;
+      text-align: left;
+    }
+    .artifacts-list {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+    .artifacts-list li {
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .artifacts-list a {
+      color: #38BDF8;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .artifacts-list a:hover {
+      text-decoration: underline;
+    }
+    form {
+      text-align: left;
+      background: #0F172A;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      margin-bottom: 32px;
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    label {
+      display: block;
+      font-size: 0.85rem;
+      color: #94A3B8;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #334155;
+      background: #1E293B;
+      color: #F8FAFC;
+      font-size: 1rem;
+    }
+    input:focus {
+      outline: none;
+      border-color: #2563EB;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.4);
+    }
+    button[type="submit"] {
+      width: 100%;
+      min-height: 48px;
+      background: #2563EB;
+      color: #FFFFFF;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    button[type="submit"]:hover {
+      background: #1D4ED8;
+    }
+    button[type="submit"]:disabled {
+      background: #475569;
+      cursor: not-allowed;
+    }
+    footer {
+      border-top: 1px solid #334155;
+      padding-top: 24px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .graduate-badge {
+      height: 44px;
+      transition: transform 0.2s ease;
+    }
+    .graduate-badge:hover {
+      transform: scale(1.05);
+    }
+    .footer-text {
+      font-size: 0.8rem;
+      color: #64748B;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="monogram">FR / ML TRACK</div>
+    <h1>Search Intelligence & ML Portfolio</h1>
+    <p class="bio">I build machine learning pipelines and autonomous agents that turn raw search and user engagement data into prioritized, evidence-backed editorial refresh queues.</p>
+
+    <!-- Professional Links Grid -->
+    <div class="links-grid">
+      <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener" class="btn-link">LinkedIn</a>
+      <a href="https://github.com/your-username" target="_blank" rel="noopener" class="btn-link">GitHub</a>
+      <a href="build_explanation.md" target="_blank" class="btn-link">CV / Resume</a>
+      <a href="https://cal.com/your-booking" target="_blank" rel="noopener" class="btn-link">Book Call</a>
+    </div>
+
+    <!-- Verified Capstone Proof Artifacts -->
+    <h2 class="section-title">Verified Build Artifacts</h2>
+    <ul class="artifacts-list">
+      <li>📄 <a href="build_explanation.md">Build Explanation (How Pages Works)</a></li>
+      <li>📋 <a href="agent_spec.md">Personal AI Agent Specification</a></li>
+      <li>⚙️ <a href="agent_build_log.md">Agent MVP Execution & Trace Log</a></li>
+      <li>🌐 <a href="dns_walkthrough.md">DNS Architecture & Routing Guide</a></li>
+      <li>⚡ <a href="dynamic_feature_explainer.md">Serverless Form Data Flow Explainer</a></li>
+      <li>🎨 <a href="mobile_polish_fix_log.md">Mobile-First Polish & Fix Log</a></li>
+      <li>👁️ <a href="design_critique_log.md">Design Critique & Peer Review Log</a></li>
+      <li>🛠️ <a href="site_hardening_audit.md">Site Hardening & Edge Case Audit</a></li>
+      <li>📊 <a href="../work/notebooks/w06_validation_audit.ipynb">Validation Audit Notebook (GitHub)</a></li>
+      <li>📌 <a href="../work/notebooks/w07_action_playbook.ipynb">Action Playbook Notebook (GitHub)</a></li>
+    </ul>
+
+    <!-- Single Dynamic Feature: Netlify Contact / Audit Form -->
+    <h2 class="section-title">Request an Editorial Refresh Audit</h2>
+    <form name="contact" method="POST" data-netlify="true" onsubmit="document.getElementById('submit-btn').disabled = true; document.getElementById('submit-btn').innerText = 'Submitting Request...';">
+      <input type="hidden" name="form-name" value="contact" />
+      
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+      </div>
+
+      <div class="form-group">
+        <label for="page_url">Page URL for Search Audit</label>
+        <input type="url" id="page_url" name="page_url" placeholder="https://example.com/blog-post" required />
+      </div>
+
+      <button type="submit" id="submit-btn">Submit Audit Request</button>
+    </form>
+
+    <!-- Footer & FlyRank Graduate Badge -->
+    <footer>
+      <a href="https://internship-badge.netlify.app/" target="_blank" rel="noopener">
+        <img src="https://img.shields.com/badge/FlyRank-Verified%20Graduate-2563EB?style=for-the-badge&logo=github" alt="FlyRank Verified Graduate Badge" class="graduate-badge" />
+      </a>
+      <p class="footer-text">© FlyRank Search Intelligence Track • Verified Graduate Portfolio</p>
+    </footer>
+  </div>
+
+</body>
+</html>
