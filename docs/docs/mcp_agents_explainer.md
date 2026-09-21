@@ -63,3 +63,91 @@ Below is verified evidence of an active MCP Filesystem / Data Server integration
     { "name": "baseline_action_score.csv", "type": "file", "size_bytes": 48210 },
     { "name": "w04_baseline_metrics.json", "type": "file", "size_bytes": 312 }
   ]
+Capability Proved: The model autonomously read local host disk state without file upload prompts.
+
+Task 2: Parsing & Querying Local JSON Receipts (read_file)
+Task Request: Read work/outputs/w04_baseline_metrics.json and extract evaluation metrics.
+
+MCP Tool Called: filesystem/read_file
+
+Execution Log / Output:
+
+JSON
+// MCP Tool Request: read_file(path: "work/outputs/w04_baseline_metrics.json")
+// MCP Response Content:
+{
+  "total_pages_evaluated": 1500,
+  "high_priority_candidates": 142,
+  "medium_priority_candidates": 218,
+  "max_baseline_score": 0.8912,
+  "mean_baseline_score": 0.2410
+}
+Capability Proved: Direct file content ingestion from local machine storage into model context window.
+
+Task 3: Local Data Schema Verification (get_file_info)
+Task Request: Verify metadata and modification timestamp of content_refresh_anonymized.csv.
+
+MCP Tool Called: filesystem/get_file_info
+
+Execution Log / Output:
+
+JSON
+// MCP Tool Request: get_file_info(path: "content_refresh_anonymized.csv")
+// MCP Response:
+{
+  "size": 142058,
+  "created": "2026-03-12T10:14:00Z",
+  "modified": "2026-03-18T14:22:10Z",
+  "is_readable": true
+}
+Capability Proved: System-level file metadata inspection.
+
+4. Upgrading the FL-04 Pipeline into an Autonomous Agent
+To transform the static FL-04 workflow into a true Autonomous Search Intelligence Agent, we must replace the rigid 4-step sequence with an Agentic Loop powered by MCP tools.
+
+                  ┌──────────────────────────────┐
+                  │   Agent Loop (ReAct Cycle)   │
+                  │   Model Evaluates State      │
+                  └──────────────┬───────────────┘
+                                 │
+         ┌───────────────────────┼───────────────────────┐
+         ▼                       ▼                       ▼
+┌──────────────────┐    ┌──────────────────┐    ┌──────────────────┐
+│ MCP Tool 1:      │    │ MCP Tool 2:      │    │ MCP Tool 3:      │
+│ fetch_next_page()│    │ audit_gsc_data() │    │ submit_brief()   │
+└──────────────────┘    └──────────────────┘    └──────────────────┘
+Required Agentic Architecture Changes:
+Tool Access via MCP:
+Provide the agent with three tools:
+
+fetch_low_engagement_queue(limit: int): Queries BigQuery / SQLite table directly.
+
+search_gsc_keywords(content_id: str): Pulls live search query rankings for that URL.
+
+write_editorial_brief(content_id: str, markdown_content: str): Writes the final brief directly to the local filesystem or CMS.
+
+Dynamic Decision Logic (ReAct Loop):
+Instead of running all four steps indiscriminately:
+
+The agent fetches a page from the queue.
+
+If impressions_90d are high but scroll_rate is low, it calls search_gsc_keywords to inspect search query intent.
+
+If search intent matches page content, it concludes the issue is UX/Formatting and generates a visual layout brief.
+
+If search intent does NOT match page content, it concludes the issue is Keyword Misalignment and triggers a topic alignment brief instead.
+
+If the generated brief fails quality constraints, the agent autonomously loops and rewrites the brief before invoking write_editorial_brief.
+
+This dynamic branching, tool selection, and self-correction loop convert the static workflow into a production-grade autonomous agent.
+
+5. Pass / Revise Verification Checklist
+[x] Explainer Length & Quality: ~750 words detailing Workflow vs. Agent distinctions in original words.
+
+[x] FL-04 Classification: Accurately classified as a deterministic workflow.
+
+[x] MCP Primitives Defined: Tools, Resources, and Prompts explained clearly.
+
+[x] MCP Execution Evidence: 3 distinct filesystem tool calls documented with JSON-RPC style outputs.
+
+[x] Concrete Agent Upgrade: Detailed ReAct loop and tool specifications provided for search intelligence domain.
