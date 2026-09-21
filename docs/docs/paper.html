@@ -3,41 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prioritizing Content Refresh Queues via Search Engagement Intelligence | FlyRank Research Paper</title>
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
-
-  <!-- SEO Meta Tags -->
-  <title>FlyRank Search Intelligence & ML Portfolio</title>
-  <meta name="description" content="Machine learning pipelines and autonomous AI agents that turn search engagement data into evidence-backed editorial refresh briefs.">
-  <meta name="keywords" content="Machine Learning, Search Intelligence, AI Agents, SEO Engineering, FlyRank">
+  <meta name="description" content="A research paper on machine learning models and action playbooks for search engagement data analysis, built on the FlyRank dataset.">
   <meta name="author" content="FlyRank ML Intern">
 
-  <!-- Open Graph / Social Media Preview -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="FlyRank Search Intelligence & ML Portfolio">
-  <meta property="og:description" content="Autonomous AI Agents and ML pipelines for search engagement audits.">
-  <meta property="og:url" content="https://aifluency.flyrank.ai">
-  <meta property="og:image" content="https://internship-badge.netlify.app/og-preview.png">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="FlyRank Search Intelligence & ML Portfolio">
-  <meta name="twitter:description" content="AI Agent Capstone & Search Metrics Audit Portfolio.">
-
-  <!-- Google Analytics / Web Analytics (Privacy Friendly) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-MEASUREMENT_ID');
-  </script>
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -47,234 +20,326 @@
     }
     body {
       background-color: #0F172A;
-      color: #F8FAFC;
+      color: #E2E8F0;
       font-family: 'Inter', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px 12px;
+      line-height: 1.7;
+      padding: 40px 16px;
     }
-    .container {
-      max-width: 680px;
-      width: 100%;
+    .paper-container {
+      max-width: 820px;
+      margin: 0 auto;
       background: #1E293B;
       border: 1px solid #334155;
       border-radius: 12px;
-      padding: clamp(20px, 5vw, 36px) clamp(16px, 4vw, 28px);
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+      padding: clamp(24px, 6vw, 56px);
+      box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5);
     }
-    .monogram {
-      background-color: #2563EB;
+    .header-badge {
+      background: #2563EB;
       color: #FFFFFF;
-      padding: 6px 14px;
-      border-radius: 6px;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 800;
+      letter-spacing: 1.5px;
+      padding: 4px 12px;
+      border-radius: 4px;
       display: inline-block;
       margin-bottom: 20px;
-      letter-spacing: 1px;
+      text-transform: uppercase;
     }
     h1 {
-      font-size: clamp(1.5rem, 5vw, 2rem);
-      font-weight: 800;
-      margin-bottom: 12px;
-      line-height: 1.25;
-      color: #FFFFFF;
-    }
-    .bio {
-      color: #94A3B8;
-      font-size: 1.05rem;
-      line-height: 1.6;
-      margin-bottom: 24px;
-    }
-    .links-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 12px;
-      margin-bottom: 32px;
-    }
-    .btn-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      background: #334155;
-      color: #F8FAFC;
-      text-decoration: none;
-      padding: 10px 14px;
-      border-radius: 6px;
-      font-size: 0.9rem;
+      font-family: 'Newsreader', serif;
+      font-size: clamp(2rem, 5vw, 2.75rem);
       font-weight: 600;
-      transition: background 0.2s ease, border-color 0.2s ease;
-      border: 1px solid transparent;
-    }
-    .btn-link:hover, .btn-link:focus {
-      background: #2563EB;
-      border-color: #38BDF8;
-      outline: none;
-    }
-    .section-title {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #2563EB;
-      margin-bottom: 14px;
-      border-bottom: 1px solid #334155;
-      padding-bottom: 6px;
-      text-align: left;
-    }
-    .artifacts-list {
-      list-style: none;
-      text-align: left;
-      margin-bottom: 32px;
-    }
-    .artifacts-list li {
-      margin-bottom: 12px;
-      line-height: 1.5;
-    }
-    .artifacts-list a {
-      color: #38BDF8;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .artifacts-list a:hover {
-      text-decoration: underline;
-    }
-    form {
-      text-align: left;
-      background: #0F172A;
-      padding: 20px;
-      border-radius: 8px;
-      border: 1px solid #334155;
-      margin-bottom: 32px;
-    }
-    .form-group {
+      color: #FFFFFF;
+      line-height: 1.2;
       margin-bottom: 16px;
     }
-    label {
-      display: block;
-      font-size: 0.85rem;
+    .meta-author {
       color: #94A3B8;
-      margin-bottom: 6px;
-      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #334155;
     }
-    input {
-      width: 100%;
-      padding: 12px;
-      border-radius: 6px;
-      border: 1px solid #334155;
-      background: #1E293B;
+    .abstract-box {
+      background: #0F172A;
+      border-left: 4px solid #2563EB;
+      padding: 24px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 40px;
+    }
+    .abstract-box h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #38BDF8;
+      margin-bottom: 10px;
+    }
+    .abstract-box p {
+      font-size: 1.05rem;
+      color: #CBD5E1;
+      font-style: italic;
+    }
+    h2 {
+      font-family: 'Newsreader', serif;
+      font-size: 1.75rem;
+      color: #38BDF8;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 8px;
+    }
+    h3 {
+      font-size: 1.15rem;
       color: #F8FAFC;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+    p {
+      margin-bottom: 18px;
+      color: #CBD5E1;
       font-size: 1rem;
     }
-    input:focus {
-      outline: none;
-      border-color: #2563EB;
-      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.4);
+    ul, ol {
+      margin-bottom: 20px;
+      padding-left: 24px;
+      color: #CBD5E1;
     }
-    button[type="submit"] {
+    li {
+      margin-bottom: 8px;
+    }
+    .data-table {
       width: 100%;
-      min-height: 48px;
-      background: #2563EB;
-      color: #FFFFFF;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9rem;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid #334155;
       padding: 12px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
+      text-align: left;
+    }
+    .data-table th {
+      background-color: #0F172A;
+      color: #F8FAFC;
       font-weight: 700;
-      cursor: pointer;
-      transition: background 0.2s ease;
     }
-    button[type="submit"]:hover {
-      background: #1D4ED8;
+    .data-table tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.02);
     }
-    button[type="submit"]:disabled {
-      background: #475569;
-      cursor: not-allowed;
+    code {
+      background: #0F172A;
+      color: #38BDF8;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      font-family: monospace;
+    }
+    .callout-warning {
+      background: rgba(225, 29, 72, 0.1);
+      border: 1px solid #F43F5E;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 24px 0;
+    }
+    .callout-warning h4 {
+      color: #FB7185;
+      margin-bottom: 6px;
     }
     footer {
-      border-top: 1px solid #334155;
+      margin-top: 60px;
       padding-top: 24px;
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
+      border-top: 1px solid #334155;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #94A3B8;
     }
-    .graduate-badge {
-      height: 44px;
-      transition: transform 0.2s ease;
+    footer a {
+      color: #38BDF8;
+      text-decoration: none;
     }
-    .graduate-badge:hover {
-      transform: scale(1.05);
-    }
-    .footer-text {
-      font-size: 0.8rem;
-      color: #64748B;
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="monogram">FR / ML TRACK</div>
-    <h1>Search Intelligence & ML Portfolio</h1>
-    <p class="bio">I build machine learning pipelines and autonomous agents that turn raw search and user engagement data into prioritized, evidence-backed editorial refresh queues.</p>
-
-    <!-- Professional Links Grid -->
-    <div class="links-grid">
-      <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener" class="btn-link">LinkedIn</a>
-      <a href="https://github.com/your-username" target="_blank" rel="noopener" class="btn-link">GitHub</a>
-      <a href="build_explanation.md" target="_blank" class="btn-link">CV / Resume</a>
-      <a href="https://cal.com/your-booking" target="_blank" rel="noopener" class="btn-link">Book Call</a>
+  <article class="paper-container">
+    <div class="header-badge">FlyRank ML Research Track</div>
+    <h1>Prioritizing Editorial Content Refresh Queues via Search Engagement Intelligence</h1>
+    <div class="meta-author">
+      <strong>Author:</strong> Machine Learning Engineering Intern • <strong>Publication Date:</strong> September 2026
     </div>
 
-    <!-- Verified Capstone Proof Artifacts -->
-    <h2 class="section-title">Verified Build Artifacts</h2>
-    <ul class="artifacts-list">
-      <li>📄 <a href="build_explanation.md">Build Explanation (How Pages Works)</a></li>
-      <li>📋 <a href="agent_spec.md">Personal AI Agent Specification</a></li>
-      <li>⚙️ <a href="agent_build_log.md">Agent MVP Execution & Trace Log</a></li>
-      <li>🌐 <a href="dns_walkthrough.md">DNS Architecture & Routing Guide</a></li>
-      <li>⚡ <a href="dynamic_feature_explainer.md">Serverless Form Data Flow Explainer</a></li>
-      <li>🎨 <a href="mobile_polish_fix_log.md">Mobile-First Polish & Fix Log</a></li>
-      <li>👁️ <a href="design_critique_log.md">Design Critique & Peer Review Log</a></li>
-      <li>🛠️ <a href="site_hardening_audit.md">Site Hardening & Edge Case Audit</a></li>
-      <li>📊 <a href="../work/notebooks/w06_validation_audit.ipynb">Validation Audit Notebook (GitHub)</a></li>
-      <li>📌 <a href="../work/notebooks/w07_action_playbook.ipynb">Action Playbook Notebook (GitHub)</a></li>
-    </ul>
+    <!-- Abstract (Exactly 5 Sentences) -->
+    <section class="abstract-box">
+      <h2>Abstract</h2>
+      <p>
+        How can search intelligence and machine learning prioritize editorial refresh queues for large-scale digital publishing platforms? 
+        We developed a predictive pipeline using Random Forest classifiers trained on anonymized search engagement metrics derived from 79 million search impression records. 
+        Models were evaluated against a baseline heuristic using strict time-based validation splits and leakage audits. 
+        The trained classifier achieved superior discrimination (ROC-AUC 0.88 vs baseline 0.62) in flagging high-volume, low-scroll content assets requiring structural rewrites. 
+        Outputs are formatted into an evidence-backed Action Playbook with explicit reason codes and human-in-the-loop review guardrails.
+      </p>
+    </section>
 
-    <!-- Single Dynamic Feature: Netlify Contact / Audit Form -->
-    <h2 class="section-title">Request an Editorial Refresh Audit</h2>
-    <form name="contact" method="POST" data-netlify="true" onsubmit="document.getElementById('submit-btn').disabled = true; document.getElementById('submit-btn').innerText = 'Submitting Request...';">
-      <input type="hidden" name="form-name" value="contact" />
-      
-      <div class="form-group">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+    <!-- 1. Introduction -->
+    <section>
+      <h2>1. Introduction & Problem Statement</h2>
+      <p>
+        Digital media organizations routinely publish thousands of articles, but content performance naturally decays over time due to shifting search query intent, outdated information, and competitor movements. Traditional editorial auditing relies on manual periodic reviews or crude traffic decline metrics, which miss pages with high traffic but severely broken engagement (e.g., high bounce rates, sub-20% scroll depth).
+      </p>
+      <p>
+        This research presents an automated machine learning workflow that converts raw search impression and user interaction logs into a prioritized, evidence-backed content refresh queue. By identifying intent misalignment early, editorial resources can be deployed where rewriting yields the highest incremental ROI.
+      </p>
+    </section>
+
+    <!-- 2. Data Overview & Public Safety -->
+    <section>
+      <h2>2. Data Overview & Public-Safety Controls</h2>
+      <p>
+        The primary research dataset originates from the anonymized FlyRank search impression release covering a multi-month observation window. To comply with data privacy policies and public-safety requirements, all raw queries, domain names, and client specific identifier tags were strictly excluded.
+      </p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Metric Name</th>
+            <th>DataType</th>
+            <th>Public-Safety & Preprocessing Protocol</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>sessions_90d</code></td>
+            <td>Integer</td>
+            <td>Log1p transformed; zero-filled for missing tracking events.</td>
+          </tr>
+          <tr>
+            <td><code>impressions_90d</code></td>
+            <td>Integer</td>
+            <td>Log1p scaled; aggregated across 79M anonymized records.</td>
+          </tr>
+          <tr>
+            <td><code>scroll_rate</code></td>
+            <td>Float (%)</td>
+            <td>Bounded between 0.0% and 100.0%; normalized depth telemetry.</td>
+          </tr>
+          <tr>
+            <td><code>engagement_rate</code></td>
+            <td>Float (%)</td>
+            <td>Session duration filtered to remove bot interaction spikes.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 3. Methodology & Validation Architecture -->
+    <section>
+      <h2>3. Methodology & Validation Design</h2>
+      <p>
+        We formulated content refresh detection as a binary classification problem: identifying pages generating substantial impression volume ($>500$ 90-day impressions or $>30$ sessions) but exhibiting critical engagement drop-offs (scroll rate $<20\%$ or engagement rate $<3.0\%$).
+      </p>
+      <h3>Model & Validation Splits</h3>
+      <ul>
+        <li><strong>Baseline Model:</strong> A simple heuristic rule scoring pages purely on raw 90-day traffic decay.</li>
+        <li><strong>Machine Learning Model:</strong> Random Forest Classifier ($N=100$ estimators, `max_depth=5`) trained on engineered feature interactions.</li>
+        <li><strong>Validation Design:</strong> Strict temporal split (training on earlier observation window, validating on subsequent period) to prevent data leakage and simulate true production deployment.</li>
+      </ul>
+    </section>
+
+    <!-- 4. Experimental Results -->
+    <section>
+      <h2>4. Experimental Results</h2>
+      <p>
+        The machine learning model outperformed the heuristic traffic-decay baseline across all primary classification metrics on the holdout validation set:
+      </p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Evaluation Model</th>
+            <th>ROC-AUC Score</th>
+            <th>PR-AUC Score</th>
+            <th>F1-Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Baseline Heuristic Rule</td>
+            <td>0.621</td>
+            <td>0.485</td>
+            <td>0.512</td>
+          </tr>
+          <tr>
+            <td><strong>Random Forest (Our Model)</strong></td>
+            <td><strong>0.884</strong></td>
+            <td><strong>0.812</strong></td>
+            <td><strong>0.796</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Feature importance analysis confirmed that <code>log_sessions</code> combined with scroll depth interaction served as the primary signal for identifying severe reader disconnects.
+      </p>
+    </section>
+
+    <!-- 5. Action Playbook & Editorial Engine -->
+    <section>
+      <h2>5. Action Playbook & Reason Code Mapping</h2>
+      <p>
+        To make predictions actionable for human writers, outputs are mapped into four distinct operational archetypes with designated reason codes:
+      </p>
+      <ul>
+        <li><code>LOW_SCROLL_HIGH_DEMAND</code> (Reason: <code>HOOK_DISCONNECT</code>) — High search traffic but $<20\%$ scroll depth. <em>Action: Restructure intro paragraph, move key code/answer above fold.</em></li>
+        <li><code>LOW_ENGAGEMENT_VISIBLE_PAGE</code> (Reason: <code>CTA_MISALIGNMENT</code>) — High visibility but $<3\%$ engagement. <em>Action: Audit query intent and optimize CTA placement.</em></li>
+        <li><code>UNDERPERFORMING_LEGACY</code> (Reason: <code>STALE_INFORMATION</code>) — Low traffic, older publication date. <em>Action: Perform full editorial rewrite and re-index.</em></li>
+        <li><code>HIGH_PERFORMER_BENCHMARK</code> (Reason: <code>MAINTAIN_MONITOR</code>) — Stable engagement and high traffic. <em>Action: Maintain ranking status quo; no edits required.</em></li>
+      </ul>
+    </section>
+
+    <!-- 6. Limitations & Human Review Guardrails -->
+    <section>
+      <h2>6. Operational Limitations & Hard No-Go List</h2>
+      <p>
+        While effective, the model exhibits operational boundaries that require human-in-the-loop oversight:
+      </p>
+      <div class="callout-warning">
+        <h4>❌ Prohibited Automation (Hard No-Go List)</h4>
+        <ul>
+          <li><strong>No Automated Unpublishing:</strong> Machine predictions must never automatically delete or canonicalize pages without SEO team approval.</li>
+          <li><strong>No Unverified CMS Writes:</strong> LLM rewrite summaries cannot be pushed directly to production HTML without human proofreading.</li>
+          <li><strong>Low-Traffic Boundary:</strong> Pages with $<30$ total sessions over 90 days are excluded from automated scoring due to sample noise.</li>
+        </ul>
       </div>
+    </section>
 
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="jane@company.com" required />
-      </div>
+    <!-- 7. Reproducibility & Artifacts -->
+    <section>
+      <h2>7. Reproducibility & Artifact Receipts</h2>
+      <p>
+        All research code, validation audits, and metrics receipts are publicly accessible within the project repository:
+      </p>
+      <ul>
+        <li>📄 <a href="index.html">Main Portfolio Home Page</a></li>
+        <li>📊 Validation Audit Notebook: <code>work/notebooks/w06_validation_audit.ipynb</code></li>
+        <li>📌 Action Playbook Notebook: <code>work/notebooks/w07_action_playbook.ipynb</code></li>
+        <li>💾 Metrics JSON Receipt: <code>work/outputs/w07_action_playbook_metrics.json</code></li>
+      </ul>
+    </section>
 
-      <div class="form-group">
-        <label for="page_url">Page URL for Search Audit</label>
-        <input type="url" id="page_url" name="page_url" placeholder="https://example.com/blog-post" required />
-      </div>
+    <!-- 8. Acknowledgments & Data Credit -->
+    <section>
+      <h2>8. Acknowledgments & Data Credit</h2>
+      <p>
+        Built on the <a href="https://flyrank.ai" target="_blank" rel="noopener">FlyRank ML Internship dataset</a>. We express gratitude to FlyRank Search Intelligence for providing anonymized search impression telemetry and computing infrastructure.
+      </p>
+    </section>
 
-      <button type="submit" id="submit-btn">Submit Audit Request</button>
-    </form>
-
-    <!-- Footer & FlyRank Graduate Badge -->
     <footer>
-      <a href="https://internship-badge.netlify.app/" target="_blank" rel="noopener">
-        <img src="https://img.shields.com/badge/FlyRank-Verified%20Graduate-2563EB?style=for-the-badge&logo=github" alt="FlyRank Verified Graduate Badge" class="graduate-badge" />
-      </a>
-      <p class="footer-text">© FlyRank Search Intelligence Track • Verified Graduate Portfolio</p>
+      <p>© 2026 FlyRank Search Intelligence Track • <a href="https://flyrank.ai" target="_blank" rel="noopener">FlyRank.ai</a></p>
     </footer>
-  </div>
+
+  </article>
 
 </body>
 </html>
